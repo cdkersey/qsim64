@@ -1,0 +1,17 @@
+. Add System.map loading and backtrace support (with function names)
+_ Add initial SFI table support.
+  - These are what replaced (much earlier) MP tables and are available in
+    adition to (or instead of) ACPI tables. They start at any 16-byte boundary
+    between 0xe0000 and 0xfffff.
+  - Use these to inform the kernel of the number of processors. Do _not_ use the
+    memory map table, as this is already implemented by the fake BIOS.
+_ Figure out how which address space the APIC will live in and make it available
+  - If it's in the MSRs, add callback support for these to QSim.
+_ Add basic fake interrupt controller support
+  _ Old-style interrupt controller
+  _ APIC
+_ Add APIC timer support
+_ Add IPI support
+_ Add PCI support
+_ Add disk
+_ Add video

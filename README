@@ -1,0 +1,6 @@
+QSim Hardware Emulation Layer
+=============================
+
+This layer is being created to support the running of unmodified x86-64 Linux
+kernels on Qsim. The primary barrier to this in the past has been the complete
+lack of APIC emulation, which this layer provides.
